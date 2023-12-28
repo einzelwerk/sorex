@@ -3,7 +3,7 @@
 	"menuItems": [
 		{
 			"label": "Start Page",
-			"url": "/"
+			"url": "/sorex"
 		},
 		{
 			"label": "Home",
