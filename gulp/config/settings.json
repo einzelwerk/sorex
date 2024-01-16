@@ -1,33 +1,33 @@
 {
-	"projectName": "sorex",
+	"projectName": "Sorex",
 	"menuItems": [
 		{
-			"label": "Start Page",
-			"url": "/sorex"
+			"label": "Стартова сторінка",
+			"url": "/"
 		},
 		{
-			"label": "Home",
-			"url": "/sorex/main.html"
+			"label": "Головна",
+			"url": "/Sorex/main.html"
 		},
 		{
-			"label": "Private",
-			"url": "/sorex/privat.html"
+			"label": "Приват",
+			"url": "/Sorex/privat.html"
 		},
 		{
-			"label": "Private 2",
-			"url": "/sorex/privat2.html"
+			"label": "Приват 2",
+			"url": "/Sorex/privat2.html"
 		},
 		{
-			"label": "Product",
-			"url": "/sorex/detail.html"
+			"label": "Продукт",
+			"url": "/Sorex/detail.html"
 		},
 		{
 			"label": "Bundle",
-			"url": "/sorex/bundle.html"
+			"url": "/Sorex/bundle.html"
 		},
 		{
 			"label": "Shop",
-			"url": "/sorex/shop.html"
+			"url": "/Sorex/shop.html"
 		}
 	]
 }

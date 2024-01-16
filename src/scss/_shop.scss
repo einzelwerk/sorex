@@ -1,12 +1,12 @@
 .shop {
 	&__buttons {
-		@include adaptiv-value("margin-top", toPX(36), toPX(0), 1);
-		@include adaptiv-value("margin-bottom", toPX(56), toPX(35), 1);
 		ul {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 			@include adaptiv-value("gap", toPX(20), toPX(10), 1);
+			@include adaptiv-value("margin-top", toPX(36), toPX(0), 1);
+			@include adaptiv-value("margin-bottom", toPX(56), toPX(35), 1);
 
 			li {
 				width: 100%;
@@ -40,6 +40,10 @@
 				gap: 15px;
 				width: 100%;
 			}
+		}
+
+		&-mobile {
+			display: none;
 		}
 	}
 
@@ -111,7 +115,12 @@
 		gap: 17px;
 
 		a {
+			font-weight: 300;
 			font-size: 38px;
+
+			&.fa-solid {
+				font-weight: 900 !important;
+			}
 		}
 	}
 
@@ -161,7 +170,7 @@
 .shop__reverse {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr) !important;
-	@include adaptiv-value("gap", toPX(100), toPX(50), 1);
+	gap: 20px !important;
 	.shop {
 		&__item {
 			display: grid;
@@ -301,7 +310,7 @@
 		position: absolute;
 		bottom: -100px;
 		right: 150px;
-
+		@include adaptiv-value("max-width", toPX(655), toPX(250), 1);
 		img {
 			@include adaptiv-value("max-width", toPX(655), toPX(250), 1);
 		}
@@ -316,14 +325,15 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		gap: 50px;
-		max-width: 50%;
+		@include adaptiv-value("gap", toPX(50), toPX(25), 1);
+		//gap: 50px;
+		@include adaptiv-value("max-width", toPX(700), toPX(0), 1);
 		padding: 40px;
 	}
 
 	&__title {
-		@include adaptiv-value("font-size", toPX(40), toPX(30), 1);
-		font-weight: 600;
+		@include adaptiv-value("font-size", toPX(40), toPX(20), 1);
+		font-weight: 400;
 		text-align: center;
 	}
 
@@ -332,11 +342,37 @@
 		bottom: 20px;
 		left: 50px;
 	}
+	&__close {
+		position: absolute;
+		@include adaptiv-value("font-size", toPX(38), toPX(31), 1);
+		top: 20px;
+		right: 20px;
+		color: #fff;
+		cursor: pointer;
+	}
 }
 @include media-width(1400px) {
 	.shop {
 		&__wrapper {
 			grid-template-columns: repeat(3, 1fr);
+		}
+
+		&__item-img {
+			picture,
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+}
+@include media-width(1280px) {
+	.shop-banner {
+		&__content {
+			max-width: 45%;
+		}
+		&__img {
+			right: 80px;
 		}
 	}
 }
@@ -344,6 +380,12 @@
 	.shop {
 		&__wrapper {
 			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	.shop-banner {
+		&__content {
+			max-width: 50%;
 		}
 	}
 }
@@ -381,6 +423,10 @@
 			display: none;
 		}
 
+		&__close {
+			font-weight: 100;
+		}
+
 		&__nav {
 			display: flex;
 		}
@@ -390,7 +436,8 @@
 		}
 		&__fliter {
 			position: fixed;
-			bottom: 40%;
+			top: 0;
+			//bottom: 40%;
 			display: flex;
 			left: 0;
 			right: 0;

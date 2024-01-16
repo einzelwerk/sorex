@@ -4,8 +4,9 @@
 	&__label {
 		position: absolute;
 		right: 24px;
-		top: -90px;
-		@include adaptiv-value("max-width", toPX(213), toPX(108), 1);
+		//top: -90px;
+		@include adaptiv-value("top", toPX(-90), toPX(-120), 1);
+		@include adaptiv-value("max-width", toPX(190), toPX(108), 1);
 	}
 
 	&__wrapper {
@@ -21,14 +22,16 @@
 		&::after {
 			content: "";
 			display: block;
-			@include adaptiv-value("width", toPX(592), toPX(452), 1);
+			// @include adaptiv-value("width", toPX(592), toPX(452), 1);
 			@include adaptiv-value("height", toPX(301), toPX(230), 1);
 			background-image: url("../img/types-bg.png");
 			background-repeat: no-repeat;
 			background-size: cover;
+			background-position: center right;
 			position: absolute;
-			bottom: 150px;
-			left: 280px;
+			@include adaptiv-value("bottom", toPX(150), toPX(-80), 1);
+			@include adaptiv-value("left", toPX(150), toPX(-200), 1);
+			right: 48%;
 			opacity: 0.5;
 			z-index: -1;
 		}
@@ -81,14 +84,18 @@
 			&::after {
 				left: 0;
 				right: 0;
+				bottom: 150px;
 				background-size: 120% 100%;
 				background-position: center;
 				width: 100%;
 			}
 		}
+		&__desc {
+			text-align: center;
+		}
 		&__label {
-			top: 30px;
-			right: -15px;
+			top: 35px;
+			right: -8px;
 			left: auto;
 		}
 		&__buttons {

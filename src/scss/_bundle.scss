@@ -2,4 +2,12 @@
 	&__wrapper {
 		grid-template-columns: 1fr 1fr;
 	}
+
+	&-label-reg {
+		@include adaptiv-value("font-size", toPX(20), toPX(17), 1);
+	}
+
+	&__header {
+		text-align: center;
+	}
 }
