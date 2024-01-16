@@ -10,6 +10,7 @@
 		display: flex;
 		align-items: center;
 		overflow: hidden;
+		@include adaptiv-value("border-radius", toPX(25), toPX(10), 1);
 
 		img {
 			height: 100%;
@@ -19,7 +20,7 @@
 	&__label {
 		position: absolute;
 		@include adaptiv-value("top", -80, -40, 1);
-		@include adaptiv-value("right", -50, 0, 1);
+		@include adaptiv-value("right", -50, 15, 1);
 		@include adaptiv-value("max-width", 238, 131, 1);
 	}
 
@@ -107,6 +108,26 @@
 	}
 }
 
+@include media-width(1700px) {
+	.hero {
+		&__buttons {
+			max-width: 90%;
+		}
+	}
+}
+
+@include media-width(1560px) {
+	.hero {
+		&__text {
+			@include adaptiv-value("max-width", 500, 250, 1);
+		}
+
+		&__buttons {
+			max-width: 100%;
+		}
+	}
+}
+
 @include media-width($md) {
 	.hero {
 		&__image {
@@ -123,7 +144,7 @@
 		&__label {
 			position: absolute;
 			@include adaptiv-value("top", -80, -40, 1);
-			right: 0;
+			right: 15px;
 			@include adaptiv-value("max-width", 238, 131, 1);
 		}
 
@@ -169,7 +190,7 @@
 @include media-width($sm) {
 	.hero {
 		&__buttons {
-			flex-direction: column;
+			flex-direction: column-reverse;
 		}
 
 		&__next {

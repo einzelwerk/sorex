@@ -5,9 +5,9 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.min.css?_v=20231228230900">
-	<!-- <link rel="stylesheet" href="css/all.min.css?_v=20231228230900"> -->
-	<title>Main page</title>
+	<link rel="stylesheet" href="css/style.min.css">
+	<!-- <link rel="stylesheet" href="css/all.min.css"> -->
+	<title>Стартова сторінка</title>
 </head>
 
 <body>
@@ -16,42 +16,46 @@
 	<div class="webmalik__wrapper">
 		<section class="webmalik__container">
 			<aside class="webmalik__aside">
-
+				<div class="webmalik__image">
+					<img src="img/WM_logo.svg" alt="">
+				</div>
 				<div class="webmalik__header">
-					Project: Sorex
+					Проект: Sorex
 				</div>
 				<div class="webmalik__nav"></div>
 			</aside>
 			<section class="webmalik__body">
-				<h2>Documentation:</h2>
+				<h2>Документація:</h2>
 				<br>
-				<h3>Project</h3><br>
+				<h3>Проєкт</h3><br>
 				<p>
-					To view the project pages, please use the navigation panel on the left.
+					Для перегляду сторінок проекту, скористайтесь, будь ласка, навігаційною панеллю зліва.
 				</p>
 				<br>
-				<h3>Build</h3>
+				<h3>Збірка</h3>
 				<p>
-				<h4>Build Commands: </h4>
+				<h4>Команди для збірки: </h4>
 				<div class="webmalik__flex">
 					<span class="copy__link">npm run dev</span>
-					<p>Launches developer mode</p>
+					<p>Запускає режим розробника</p>
 				</div>
 				<div class="webmalik__flex">
 					<span class="copy__link">npm run build</span>
-					<p>Launches project build mode into the dist folder</p>
+					<p>Запускає режим збірки проекту в папку dist</p>
 				</div>
 				<div class="webmalik__flex">
 					<span class="copy__link">npm run zip</span>
-					<p>Launches project build mode into an archive</p>
+					<p>Запускає режим збірки проекту в ахів</p>
 				</div>
 				<div class="webmalik__flex">
 					<span class="copy__link">npm run ftp</span>
-					<p>Launches project build mode and sending to ftp-server</p>
+					<p>Запускає режим збірки проекту і відправлення на ftp-сервер</p>
 				</div>
 				<div class="webmalik__flex mob-1">
-					<span class="copy__link">npm run page -- --page=file_name --name=page_name</span>
-					<p>Creation of a new page and all necessary files for the page to work in the project</p>
+					<span class="copy__link">npm run page -- --page=назва_файлу --name=назва_сторінки</span>
+					<p>Створення
+						нової сторінки і
+						створення всіх необхідних файлів для роботи сторінки в проекті</p>
 				</div>
 				</p>
 			</section>
@@ -60,7 +64,7 @@
 	<div id="popupMessage"></div>
 </main>
 	</div>
-	<script src="js/app.min.js?_v=20231228230900"></script>
+	<script src="js/app.min.js"></script>
 </body>
 
 </html>

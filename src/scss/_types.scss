@@ -73,7 +73,7 @@
 		text-align: left;
 		font-weight: 300;
 		margin: 0 auto;
-		@include adaptiv-value("margin-bottom", toPX(47), toPX(70), 1);
+		@include adaptiv-value("margin-bottom", toPX(47), toPX(29), 1);
 		@include adaptiv-value("max-width", toPX(500), toPX(400), 1);
 		//max-width: 500px;
 	}

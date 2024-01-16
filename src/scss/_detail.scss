@@ -1,9 +1,10 @@
 .derail {
 	&__icons {
 		display: flex;
-		align-items: center;
+		//align-items: center;
 		gap: 20px;
 		@include adaptiv-value("margin-bottom", toPX(87), toPX(10), 1);
+		height: 100%;
 	}
 }
 .detail {
@@ -11,6 +12,7 @@
 		display: flex;
 		flex-direction: column;
 		@include adaptiv-value("gap", toPX(29), toPX(20), 1);
+		justify-content: space-between;
 		align-items: center;
 		@include adaptiv-value("padding-top", toPX(50), toPX(20), 1);
 		@include adaptiv-value("padding-bottom", toPX(50), toPX(20), 1);
@@ -102,6 +104,11 @@
 
 .detail {
 	&__hilfe {
+		.hilfe__wrapper {
+			.button {
+				justify-content: flex-start;
+			}
+		}
 	}
 
 	&__button {
@@ -132,16 +139,17 @@
 		@include adaptiv-value("padding-right", toPX(130), toPX(0), 1);
 		.new__image {
 			margin-left: -40px;
+			margin-top: 120px;
 		}
 		display: flex;
 		flex-direction: column;
 		@include adaptiv-value("gap", toPX(60), toPX(20), 1);
 
 		.new__label {
-			top: 40px;
-			right: 100px;
+			top: 0px;
+			right: 20px;
 
-			@include adaptiv-value("max-width", toPX(125.8), toPX(80), 1);
+			@include adaptiv-value("max-width", toPX(176), toPX(110), 1);
 		}
 	}
 
@@ -229,9 +237,10 @@
 
 	&__label-reg {
 		font-weight: 400;
-		font-size: 20px;
+		@include adaptiv-value("font-size", toPX(20), toPX(17), 1);
 		display: flex;
 		align-items: center;
+		@include adaptiv-value("gap", toPX(25.9), toPX(23), 1);
 		gap: 25px;
 
 		&.bundle-label-reg {
@@ -295,10 +304,19 @@
 		}
 
 		a {
+			display: flex;
+			align-items: center;
+			gap: 8px;
 			text-decoration: underline;
 			color: #222;
 			font-weight: 400;
 			@include adaptiv-value("font-size", toPX(20), toPX(14), 1);
+
+			i {
+				display: none;
+				font-size: 19px;
+				font-weight: 300;
+			}
 		}
 	}
 
@@ -315,9 +333,13 @@
 		margin-top: 22px;
 	}
 
+	.new__title {
+		margin: 0;
+	}
+
 	&__hilfe {
 		background-color: #f1f9fb;
-		box-shadow: 0 3px 6px 0 rgba($color: #000000, $alpha: 0.16);
+		box-shadow: 0 3px 6px 0 rgba($color: #000000, $alpha: 0.86);
 		@include adaptiv-value("border-radius", toPX(25), toPX(10), 1);
 		padding: 20px 30px;
 		padding-bottom: 0;
@@ -447,7 +469,18 @@
 	}
 }
 
+.hilfe__button {
+	@include adaptiv-value("font-size", toPX(20), toPX(-5), 1);
+}
+
+.detail__hilfe-title {
+	@include adaptiv-value("font-size", toPX(24), toPX(14), 1);
+}
+
 @include media-width($md) {
+	.detail__hilfe-title {
+		font-size: 24px;
+	}
 	.derail__icons {
 		display: none;
 	}
@@ -473,6 +506,13 @@
 				&-active {
 					background-color: $black_color;
 				}
+			}
+		}
+
+		&__images {
+			.new__label {
+				right: -15px !important;
+				top: -15px !important;
 			}
 		}
 		.new__view {
@@ -535,12 +575,19 @@
 			}
 		}
 	}
+	.hilfe__button {
+		font-size: 20px;
+	}
 	.detail {
 		&__description {
 			display: none;
 			&-mobile {
 				display: block;
 			}
+		}
+
+		&__hilfe {
+			width: 100%;
 		}
 
 		&__revers {
@@ -557,10 +604,31 @@
 			}
 		}
 
+		&__col-rev {
+			display: flex;
+			flex-direction: column-reverse;
+			gap: 24px;
+
+			.detail__label-reg {
+				font-size: 17px;
+			}
+
+			.detail__col {
+				margin-top: 0;
+			}
+		}
+
 		&__rate {
 			order: 1;
 			padding-top: 9.2px;
 			padding-bottom: 33.8px;
+
+			a {
+				i {
+					display: block;
+					color: #222;
+				}
+			}
 		}
 
 		&__desc-title {
@@ -683,6 +751,9 @@
 			img {
 				max-width: 200px;
 			}
+		}
+		&__hilfe {
+			box-shadow: 0 3px 6px 0 rgba($color: #000000, $alpha: 0.16);
 		}
 		&__wrapper {
 			display: flex;

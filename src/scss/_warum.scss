@@ -54,8 +54,8 @@
 	}
 
 	&__title {
-		@include adaptiv-value("font-size", toPX(40), toPX(30), 1);
-		@include adaptiv-value("margin-bottom", toPX(45), toPX(30), 1);
+		@include adaptiv-value("font-size", toPX(40), toPX(20), 1);
+		@include adaptiv-value("margin-bottom", toPX(45), toPX(-10), 1);
 		font-weight: 600;
 		@include adaptiv-value("line-height", toPX(60), toPX(46), 1);
 
@@ -103,7 +103,7 @@
 	}
 
 	&__button {
-		@include adaptiv-value("margin-top", toPX(102), toPX(30), 1);
+		@include adaptiv-value("margin-top", toPX(102), toPX(-90), 1);
 		margin-left: 0;
 		margin-right: auto;
 		max-width: 275px;
@@ -121,6 +121,7 @@
 
 			&.revers {
 				flex-direction: column;
+				margin-top: 30px;
 
 				&:nth-child(2n-1) {
 					flex-direction: column;
@@ -131,10 +132,13 @@
 		&__button {
 			max-width: none;
 			width: 100%;
+			@include adaptiv-value("margin-top", toPX(102), toPX(30), 1);
 		}
 
 		&__title {
 			text-align: center;
+			@include adaptiv-value("font-size", toPX(40), toPX(30), 1);
+			@include adaptiv-value("margin-bottom", toPX(45), toPX(30), 1);
 			br {
 				display: none;
 			}

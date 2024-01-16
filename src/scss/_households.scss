@@ -19,6 +19,7 @@
 	&__button {
 		border-color: $black_color;
 		color: $black_color;
+		gap: 10px;
 		@include adaptiv-value("font-size", toPX(20), toPX(12), 1);
 		@include adaptiv-value("line-height", toPX(30), toPX(18), 1);
 	}
@@ -63,6 +64,7 @@
 		&__buttons {
 			display: flex;
 			flex-wrap: wrap;
+			align-items: normal;
 			justify-content: space-between;
 
 			i {
@@ -79,17 +81,29 @@
 
 		&__button {
 			border-radius: 50px;
-			padding: 16.5px 15px;
+			padding: 0 15px;
+			min-height: 50px;
 			justify-content: center;
-			gap: 10px;
+			align-items: center;
+			gap: 8.5px;
 			//text-align: center;
 			max-width: calc(50% - 10px);
 			span {
-				max-width: auto;
+				max-width: 80px;
+				text-align: center;
 			}
 
 			svg {
 				max-height: 15px;
+			}
+
+			&.active {
+				svg {
+					path {
+						stroke: #fff;
+						fill: #fff;
+					}
+				}
 			}
 		}
 	}
