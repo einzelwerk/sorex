@@ -27,7 +27,7 @@ export function project() {
 
 
 	if (header) {
-		header.textContent = "Проект: " + settings.projectName
+		header.textContent = "Project: " + settings.projectName
 		settings.menuItems.forEach(element => {
 			const menuItem = document.createElement('a')
 			menuItem.href = element.url

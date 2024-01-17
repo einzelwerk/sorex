@@ -2,23 +2,23 @@
 	"projectName": "sorex",
 	"menuItems": [
 		{
-			"label": "Стартова сторінка",
+			"label": "Start page",
 			"url": "/"
 		},
 		{
-			"label": "Головна",
+			"label": "Home",
 			"url": "/sorex/main.html"
 		},
 		{
-			"label": "Приват",
+			"label": "Privat",
 			"url": "/sorex/privat.html"
 		},
 		{
-			"label": "Приват 2",
+			"label": "Privat 2 varsion",
 			"url": "/sorex/privat2.html"
 		},
 		{
-			"label": "Продукт",
+			"label": "Product detail",
 			"url": "/sorex/detail.html"
 		},
 		{
