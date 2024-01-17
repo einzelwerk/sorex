@@ -50,11 +50,15 @@
 		"sass": "^1.63.6",
 		"siema": "latest",
 		"style-loader": "latest",
-		"swiper": "^11.0.5",
+		"swiper": "latest",
 		"vinyl-ftp": "latest",
 		"webp-converter": "2.2.3",
 		"webpack": "latest",
 		"webpack-stream": "latest",
 		"yargs": "latest"
+	},
+	"dependencies": {
+		"bin-build": "^3.0.0",
+		"webpcss": "^1.3.4"
 	}
 }
